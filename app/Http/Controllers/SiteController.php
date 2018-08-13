@@ -624,4 +624,13 @@ class SiteController extends Controller
             'request_count' => HashBXCounter::get_counter('request_count')
         ]);
     }
+
+    public function voteHashBX(Request $request)
+    {
+        HashBXCounter::counter_plus_one('view_count',1);
+        return view('tips-and-tricks', [
+            'view_count' => HashBXCounter::get_counter('view_count'),
+            'request_count' => HashBXCounter::get_counter('request_count')
+        ]);
+    }
 }
