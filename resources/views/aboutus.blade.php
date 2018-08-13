@@ -54,6 +54,12 @@
             <li>Theeranun</li>
         </ul>
 
+        <h4>ขอบคุณเพื่อนบริษัท Idea Vivat ช่วยทดสอบและติดชม</h4>
+        <ul>
+            <li><a href="https://github.com/hamzternaja">kridsadee.p</a></li>
+            <li><a href="https://github.com/idea-vivat">Github Idea Vivat</a></li>
+        </ul>
+
         <h4>คนที่ลืมไม่ลง</h4>
         <ul>
             <li>Great Victory (คนที่ขาย ICO แรกให้ผม แต่ตอนนี้เค้าไปไหนก็ไม่รู้)</li>
