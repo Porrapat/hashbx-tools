@@ -248,6 +248,8 @@ class SiteController extends Controller
             'time_text' => thaidate("วันlที่ j F H:i น.", time()),
             'btc_last_price' => $btc_last_price,
             'bch_last_price' => $bch_last_price,
+            'doge_last_price' => $doge_last_price,
+            'xcn_last_price' => $xcn_last_price,
 
             'token_per_btc_buy_rate' => $token_per_btc_buy_rate,
             'buy_token_by_btc' => $buy_token_by_btc,
@@ -285,6 +287,8 @@ class SiteController extends Controller
 
         $btc_last_price = $output_arr[1]["last_price"];     // BTC
         $bch_last_price = $output_arr[27]["last_price"];    // BCH
+        $doge_last_price = $output_arr[4]["last_price"] * $btc_last_price;    // DOGE
+        $xcn_last_price = $output_arr[15]["last_price"] * $btc_last_price ;    // XCN
 
         // ------------------------------ Token/BTC ------------------------------
         $output = $this->curlGet('https://hashbx.io/exchange/Token/BTC');
@@ -471,6 +475,8 @@ class SiteController extends Controller
             'time_text' => thaidate("วันlที่ j F H:i น.", time()),
             'btc_last_price' => $btc_last_price,
             'bch_last_price' => $bch_last_price,
+            'doge_last_price' => $doge_last_price,
+            'xcn_last_price' => $xcn_last_price,
 
             'token_per_btc_buy_rate' => $token_per_btc_buy_rate,
             'buy_token_by_btc' => $buy_token_by_btc,

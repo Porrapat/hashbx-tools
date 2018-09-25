@@ -28,6 +28,18 @@
                         </div>
                         <span>{{ number_format($bch_last_price,2,".", ",") }} บาท</span>
                     </li>
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h6 class="my-0">ราคา DOGE (บาท):</h6>
+                        </div>
+                        <span>{{ number_format($doge_last_price,5,".", ",") }} บาท</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h6 class="my-0">ราคา XCN (บาท):</h6>
+                        </div>
+                        <span>{{ number_format($xcn_last_price,5,".", ",") }} บาท</span>
+                    </li>
                 </ul>
             </div>
         </div>
