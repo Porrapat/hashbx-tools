@@ -58,7 +58,7 @@ class SiteController extends Controller
         $elements = $packtPageXpath->query('//*[@id="order_buy"]/tr[1]/td[3]');	// Querying for <h1> (title of book)
         $token_per_btc_buy_rate = 0.0;
         $buy_token_by_btc = 0.0;
-        if (!is_null($elements)) {
+        if (!is_null($elements) && isset($elements[0])) {
             $token_per_btc_buy_rate = floatval(str_replace(",","",$elements[0]->nodeValue));
             $buy_token_by_btc = $btc_last_price / $token_per_btc_buy_rate;
         }
@@ -67,7 +67,7 @@ class SiteController extends Controller
 
         $token_per_btc_sell_rate = 0.0;
         $sell_token_by_btc = 0.0;
-        if (!is_null($elements)) {
+        if (!is_null($elements) && isset($elements[0])) {
             $token_per_btc_sell_rate = floatval(str_replace(",","",$elements[0]->nodeValue));
             $sell_token_by_btc = $btc_last_price / $token_per_btc_sell_rate;
         }
@@ -80,7 +80,7 @@ class SiteController extends Controller
 
         $token_per_bch_buy_rate = 0.0;
         $buy_token_by_bch = 0.0;
-        if (!is_null($elements)) {
+        if (!is_null($elements) && isset($elements[0])) {
             $token_per_bch_buy_rate = floatval(str_replace(",","",$elements[0]->nodeValue));
             $buy_token_by_bch = $bch_last_price / $token_per_bch_buy_rate;
         }
@@ -89,7 +89,7 @@ class SiteController extends Controller
 
         $token_per_bch_sell_rate = 0.0;
         $sell_token_by_bch = 0.0;
-        if (!is_null($elements)) {
+        if (!is_null($elements) && isset($elements[0])) {
             $token_per_bch_sell_rate = floatval(str_replace(",","",$elements[0]->nodeValue));
             $sell_token_by_bch = $bch_last_price / $token_per_bch_sell_rate;
         }
@@ -101,14 +101,14 @@ class SiteController extends Controller
         $elements = $packtPageXpath->query('//*[@id="order_buy"]/tr[1]/td[3]');	// Querying for <h1> (title of book)
 
         $token_per_hbx_buy_rate = 0.0;
-        if (!is_null($elements)) {
+        if (!is_null($elements) && isset($elements[0])) {
             $token_per_hbx_buy_rate = floatval(str_replace(",","",$elements[0]->nodeValue));
         }
 
         $elements = $packtPageXpath->query('//*[@id="order_sell"]/tr[1]/td[1]');	// Querying for <h1> (title of book)
 
         $token_per_hbx_sell_rate = 0.0;
-        if (!is_null($elements)) {
+        if (!is_null($elements) && isset($elements[0])) {
             $token_per_hbx_sell_rate = floatval(str_replace(",","",$elements[0]->nodeValue));
         }
 
@@ -161,7 +161,7 @@ class SiteController extends Controller
         $elements = $packtPageXpath->query('//*[@id="order_buy"]/tr[1]/td[3]');	// Querying for <h1> (title of book)
         $token_per_btc_buy_rate = 0.0;
         $buy_token_by_btc = 0.0;
-        if (!is_null($elements)) {
+        if (!is_null($elements) && isset($elements[0])) {
             $token_per_btc_buy_rate = floatval(str_replace(",","",$elements[0]->nodeValue));
             $buy_token_by_btc = $btc_last_price / $token_per_btc_buy_rate;
         }
@@ -170,7 +170,7 @@ class SiteController extends Controller
 
         $token_per_btc_sell_rate = 0.0;
         $sell_token_by_btc = 0.0;
-        if (!is_null($elements)) {
+        if (!is_null($elements) && isset($elements[0])) {
             $token_per_btc_sell_rate = floatval(str_replace(",","",$elements[0]->nodeValue));
             $sell_token_by_btc = $btc_last_price / $token_per_btc_sell_rate;
         }
@@ -183,7 +183,7 @@ class SiteController extends Controller
 
         $token_per_bch_buy_rate = 0.0;
         $buy_token_by_bch = 0.0;
-        if (!is_null($elements)) {
+        if (!is_null($elements) && isset($elements[0])) {
             $token_per_bch_buy_rate = floatval(str_replace(",","",$elements[0]->nodeValue));
             $buy_token_by_bch = $bch_last_price / $token_per_bch_buy_rate;
         }
@@ -192,7 +192,7 @@ class SiteController extends Controller
 
         $token_per_bch_sell_rate = 0.0;
         $sell_token_by_bch = 0.0;
-        if (!is_null($elements)) {
+        if (!is_null($elements) && isset($elements[0])) {
             $token_per_bch_sell_rate = floatval(str_replace(",","",$elements[0]->nodeValue));
             $sell_token_by_bch = $bch_last_price / $token_per_bch_sell_rate;
         }
@@ -205,7 +205,7 @@ class SiteController extends Controller
 
         $token_per_doge_buy_rate = 0.0;
         $buy_token_by_doge = 0.0;
-        if (!is_null($elements)) {
+        if (!is_null($elements) && isset($elements[0])) {
             $token_per_doge_buy_rate = floatval(str_replace(",","",$elements[0]->nodeValue));
             $buy_token_by_doge = $doge_last_price / $token_per_doge_buy_rate;
         }
@@ -214,7 +214,7 @@ class SiteController extends Controller
 
         $token_per_doge_sell_rate = 0.0;
         $sell_token_by_doge = 0.0;
-        if (!is_null($elements)) {
+        if (!is_null($elements) && isset($elements[0])) {
             $token_per_doge_sell_rate = floatval(str_replace(",","",$elements[0]->nodeValue));
             $sell_token_by_doge = $doge_last_price / $token_per_doge_sell_rate;
         }
@@ -227,7 +227,7 @@ class SiteController extends Controller
 
         $token_per_xcn_buy_rate = 0.0;
         $buy_token_by_xcn = 0.0;
-        if (!is_null($elements)) {
+        if (!is_null($elements) && isset($elements[0])) {
             $token_per_xcn_buy_rate = floatval(str_replace(",","",$elements[0]->nodeValue));
             $buy_token_by_xcn = $xcn_last_price / $token_per_xcn_buy_rate;
         }
@@ -236,7 +236,7 @@ class SiteController extends Controller
 
         $token_per_xcn_sell_rate = 0.0;
         $sell_token_by_xcn = 0.0;
-        if (!is_null($elements)) {
+        if (!is_null($elements) && isset($elements[0])) {
             $token_per_xcn_sell_rate = floatval(str_replace(",","",$elements[0]->nodeValue));
             $sell_token_by_xcn = $xcn_last_price / $token_per_xcn_sell_rate;
         }
@@ -292,7 +292,7 @@ class SiteController extends Controller
         $elements = $packtPageXpath->query('//*[@id="order_buy"]/tr[1]/td[3]');	// Querying for <h1> (title of book)
         $token_per_btc_buy_rate = 0.0;
         $buy_token_by_btc = 0.0;
-        if (!is_null($elements)) {
+        if (!is_null($elements) && isset($elements[0])) {
             $token_per_btc_buy_rate = floatval(str_replace(",","",$elements[0]->nodeValue));
             $buy_token_by_btc = $btc_last_price / $token_per_btc_buy_rate;
         }
@@ -301,7 +301,7 @@ class SiteController extends Controller
 
         $token_per_btc_sell_rate = 0.0;
         $sell_token_by_btc = 0.0;
-        if (!is_null($elements)) {
+        if (!is_null($elements) && isset($elements[0])) {
             $token_per_btc_sell_rate = floatval(str_replace(",","",$elements[0]->nodeValue));
             $sell_token_by_btc = $btc_last_price / $token_per_btc_sell_rate;
         }
@@ -314,7 +314,7 @@ class SiteController extends Controller
 
         $token_per_bch_buy_rate = 0.0;
         $buy_token_by_bch = 0.0;
-        if (!is_null($elements)) {
+        if (!is_null($elements) && isset($elements[0])) {
             $token_per_bch_buy_rate = floatval(str_replace(",","",$elements[0]->nodeValue));
             $buy_token_by_bch = $bch_last_price / $token_per_bch_buy_rate;
         }
@@ -323,7 +323,7 @@ class SiteController extends Controller
 
         $token_per_bch_sell_rate = 0.0;
         $sell_token_by_bch = 0.0;
-        if (!is_null($elements)) {
+        if (!is_null($elements) && isset($elements[0])) {
             $token_per_bch_sell_rate = floatval(str_replace(",","",$elements[0]->nodeValue));
             $sell_token_by_bch = $bch_last_price / $token_per_bch_sell_rate;
         }
@@ -335,14 +335,14 @@ class SiteController extends Controller
         $elements = $packtPageXpath->query('//*[@id="order_buy"]/tr[1]/td[3]');	// Querying for <h1> (title of book)
 
         $token_per_hbx_buy_rate = 0.0;
-        if (!is_null($elements)) {
+        if (!is_null($elements) && isset($elements[0])) {
             $token_per_hbx_buy_rate = floatval(str_replace(",","",$elements[0]->nodeValue));
         }
 
         $elements = $packtPageXpath->query('//*[@id="order_sell"]/tr[1]/td[1]');	// Querying for <h1> (title of book)
 
         $token_per_hbx_sell_rate = 0.0;
-        if (!is_null($elements)) {
+        if (!is_null($elements) && isset($elements[0])) {
             $token_per_hbx_sell_rate = floatval(str_replace(",","",$elements[0]->nodeValue));
         }
         // ------------------------------ END Token/HBX ------------------------------
@@ -355,14 +355,14 @@ class SiteController extends Controller
         $elements = $packtPageXpath->query('//*[@id="order_buy"]/tr[1]/td[3]');	// Querying for <h1> (title of book)
 
         $token_per_bchths_buy_rate = 0.0;
-        if (!is_null($elements)) {
+        if (!is_null($elements) && isset($elements[0])) {
             $token_per_bchths_buy_rate = floatval(str_replace(",","",$elements[0]->nodeValue));
         }
 
         $elements = $packtPageXpath->query('//*[@id="order_sell"]/tr[1]/td[1]');	// Querying for <h1> (title of book)
 
         $token_per_bchths_sell_rate = 0.0;
-        if (!is_null($elements)) {
+        if (!is_null($elements) && isset($elements[0])) {
             $token_per_bchths_sell_rate = floatval(str_replace(",","",$elements[0]->nodeValue));
         }
         // ------------------------------ END Token/BCHTHs ------------------------------
@@ -374,14 +374,14 @@ class SiteController extends Controller
         $elements = $packtPageXpath->query('//*[@id="order_buy"]/tr[1]/td[3]');	// Querying for <h1> (title of book)
 
         $token_per_xcnmhs_buy_rate = 0.0;
-        if (!is_null($elements)) {
+        if (!is_null($elements) && isset($elements[0])) {
             $token_per_xcnmhs_buy_rate = floatval(str_replace(",","",$elements[0]->nodeValue));
         }
 
         $elements = $packtPageXpath->query('//*[@id="order_sell"]/tr[1]/td[1]');	// Querying for <h1> (title of book)
 
         $token_per_xcnmhs_sell_rate = 0.0;
-        if (!is_null($elements)) {
+        if (!is_null($elements) && isset($elements[0])) {
             $token_per_xcnmhs_sell_rate = floatval(str_replace(",","",$elements[0]->nodeValue));
         }
         // ------------------------------ END Token/XCNMHs ------------------------------
@@ -393,14 +393,14 @@ class SiteController extends Controller
         $elements = $packtPageXpath->query('//*[@id="order_buy"]/tr[1]/td[3]');	// Querying for <h1> (title of book)
 
         $token_per_xmrkhs_buy_rate = 0.0;
-        if (!is_null($elements)) {
+        if (!is_null($elements) && isset($elements[0])) {
             $token_per_xmrkhs_buy_rate = floatval(str_replace(",","",$elements[0]->nodeValue));
         }
 
         $elements = $packtPageXpath->query('//*[@id="order_sell"]/tr[1]/td[1]');	// Querying for <h1> (title of book)
 
         $token_per_xmrkhs_sell_rate = 0.0;
-        if (!is_null($elements)) {
+        if (!is_null($elements) && isset($elements[0])) {
             $token_per_xmrkhs_sell_rate = floatval(str_replace(",","",$elements[0]->nodeValue));
         }
         // ------------------------------ END Token/XMRKHs ------------------------------
@@ -412,14 +412,14 @@ class SiteController extends Controller
         $elements = $packtPageXpath->query('//*[@id="order_buy"]/tr[1]/td[3]');	// Querying for <h1> (title of book)
 
         $token_per_unitths_buy_rate = 0.0;
-        if (!is_null($elements)) {
+        if (!is_null($elements) && isset($elements[0])) {
             $token_per_unitths_buy_rate = floatval(str_replace(",","",$elements[0]->nodeValue));
         }
 
         $elements = $packtPageXpath->query('//*[@id="order_sell"]/tr[1]/td[1]');	// Querying for <h1> (title of book)
 
         $token_per_unitths_sell_rate = 0.0;
-        if (!is_null($elements)) {
+        if (!is_null($elements) && isset($elements[0])) {
             $token_per_unitths_sell_rate = floatval(str_replace(",","",$elements[0]->nodeValue));
         }
         // ------------------------------ END Token/UNITTHs ------------------------------
@@ -432,14 +432,14 @@ class SiteController extends Controller
         $elements = $packtPageXpath->query('//*[@id="order_buy"]/tr[1]/td[3]');	// Querying for <h1> (title of book)
 
         $token_per_dogeghs_buy_rate = 0.0;
-        if (!is_null($elements)) {
+        if (!is_null($elements) && isset($elements[0])) {
             $token_per_dogeghs_buy_rate = floatval(str_replace(",","",$elements[0]->nodeValue));
         }
 
         $elements = $packtPageXpath->query('//*[@id="order_sell"]/tr[1]/td[1]');	// Querying for <h1> (title of book)
 
         $token_per_dogeghs_sell_rate = 0.0;
-        if (!is_null($elements)) {
+        if (!is_null($elements) && isset($elements[0])) {
             $token_per_dogeghs_sell_rate = floatval(str_replace(",","",$elements[0]->nodeValue));
         }
         // ------------------------------ END Token/DOGEGHs ------------------------------
@@ -452,14 +452,14 @@ class SiteController extends Controller
         $elements = $packtPageXpath->query('//*[@id="order_buy"]/tr[1]/td[3]');	// Querying for <h1> (title of book)
 
         $token_per_etcmhs_buy_rate = 0.0;
-        if (!is_null($elements)) {
+        if (!is_null($elements) && isset($elements[0])) {
             $token_per_etcmhs_buy_rate = floatval(str_replace(",","",$elements[0]->nodeValue));
         }
 
         $elements = $packtPageXpath->query('//*[@id="order_sell"]/tr[1]/td[1]');	// Querying for <h1> (title of book)
 
         $token_per_etcmhs_sell_rate = 0.0;
-        if (!is_null($elements)) {
+        if (!is_null($elements) && isset($elements[0])) {
             $token_per_etcmhs_sell_rate = floatval(str_replace(",","",$elements[0]->nodeValue));
         }
         // ------------------------------ END Token/ETCMHs ------------------------------
@@ -525,7 +525,7 @@ class SiteController extends Controller
         $elements = $packtPageXpath->query('//*[@id="order_buy"]/tr[1]/td[3]');	// Querying for <h1> (title of book)
         $token_per_btc_buy_rate = 0.0;
         $buy_token_by_btc = 0.0;
-        if (!is_null($elements)) {
+        if (!is_null($elements) && isset($elements[0])) {
             $token_per_btc_buy_rate = floatval(str_replace(",","",$elements[0]->nodeValue));
             $buy_token_by_btc = $btc_last_price / $token_per_btc_buy_rate;
         }
@@ -534,7 +534,7 @@ class SiteController extends Controller
 
         $token_per_btc_sell_rate = 0.0;
         $sell_token_by_btc = 0.0;
-        if (!is_null($elements)) {
+        if (!is_null($elements) && isset($elements[0])) {
             $token_per_btc_sell_rate = floatval(str_replace(",","",$elements[0]->nodeValue));
             $sell_token_by_btc = $btc_last_price / $token_per_btc_sell_rate;
         }
@@ -547,7 +547,7 @@ class SiteController extends Controller
 
         $token_per_bch_buy_rate = 0.0;
         $buy_token_by_bch = 0.0;
-        if (!is_null($elements)) {
+        if (!is_null($elements) && isset($elements[0])) {
             $token_per_bch_buy_rate = floatval(str_replace(",","",$elements[0]->nodeValue));
             $buy_token_by_bch = $bch_last_price / $token_per_bch_buy_rate;
         }
@@ -556,7 +556,7 @@ class SiteController extends Controller
 
         $token_per_bch_sell_rate = 0.0;
         $sell_token_by_bch = 0.0;
-        if (!is_null($elements)) {
+        if (!is_null($elements) && isset($elements[0])) {
             $token_per_bch_sell_rate = floatval(str_replace(",","",$elements[0]->nodeValue));
             $sell_token_by_bch = $bch_last_price / $token_per_bch_sell_rate;
         }
@@ -568,14 +568,14 @@ class SiteController extends Controller
         $elements = $packtPageXpath->query('//*[@id="order_buy"]/tr[1]/td[3]');	// Querying for <h1> (title of book)
 
         $token_per_hbx_buy_rate = 0.0;
-        if (!is_null($elements)) {
+        if (!is_null($elements) && isset($elements[0])) {
             $token_per_hbx_buy_rate = floatval(str_replace(",","",$elements[0]->nodeValue));
         }
 
         $elements = $packtPageXpath->query('//*[@id="order_sell"]/tr[1]/td[1]');	// Querying for <h1> (title of book)
 
         $token_per_hbx_sell_rate = 0.0;
-        if (!is_null($elements)) {
+        if (!is_null($elements) && isset($elements[0])) {
             $token_per_hbx_sell_rate = floatval(str_replace(",","",$elements[0]->nodeValue));
         }
         // ------------------------------ END Token/HBX -----------------------------
