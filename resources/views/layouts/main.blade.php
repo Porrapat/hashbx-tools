@@ -96,7 +96,7 @@
 
     </nav>
 
-    <div class="container" style="margin-top:30px;padding-bottom:50px;">
+    <div class="container" style="padding-bottom:50px;">
         @yield('content')
     </div>
 

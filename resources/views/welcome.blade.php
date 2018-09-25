@@ -4,6 +4,16 @@
 
 <div class="row">
     <div class="col-md-12">
+        <div class="alert alert-danger" role="alert">
+            <h4 class="alert-heading">หมายเหตุ</h4>
+            <p>- ปิด Exchange HashBx.io ชั่วคราวครับ เลยทำให้ราคา Realtime แสดงเป็น 0 ก่อน ซึ่งไม่ใช่ราคาที่แท้จริง <a href="https://hashbx.io/exchange/Token/BTC" target="_blank">Link ที่มา</a></p>
+            <p>- ผู้จัดทำ กำลังหาไอเดียพัฒนาแอพนี้เพิ่มเติมครับ ว่างๆ มาคุยกันได้ ติดต่อได้<a href="/about-us">ที่นี่</a></p>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
         <div class="card">
             <div class="card-header">
                 ข้อมูลพื้นฐานทั่วไป (จาก <a href="http://www.bx.in.th" target="_blank">bx.in.th</a>)
